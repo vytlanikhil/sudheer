@@ -14,7 +14,7 @@ export default function Scene4Letter({ onNext }) {
         className="text-center space-y-1 mt-2 z-20"
       >
         <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-100 border border-rose-300 text-rose-700 text-xs font-fredoka font-bold tracking-wider uppercase">
-          Slide 1 of 2 💌
+          Message From My Heart 💌
         </span>
         <h2 className="text-xl sm:text-2xl font-fredoka font-bold text-deep-rose">
           {CONFIG.LETTER.TITLE}
@@ -53,13 +53,13 @@ export default function Scene4Letter({ onNext }) {
         </div>
       </motion.div>
 
-      {/* Button to Slide 2 */}
+      {/* Button to Grand Finale */}
       <div className="w-full max-w-xs min-h-[50px] flex items-center justify-center z-20">
         <button
           onClick={onNext}
           className="btn-pink-primary w-full py-3.5 rounded-full font-fredoka text-xs tracking-wider uppercase shadow-xl"
         >
-          One Last Surprise 🎉 (Slide 2)
+          One Last Surprise 🎉
         </button>
       </div>
 
