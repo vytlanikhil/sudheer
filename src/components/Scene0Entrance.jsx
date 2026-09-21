@@ -24,13 +24,13 @@ export default function Scene0Entrance({ onNext }) {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col items-center justify-center px-6 text-center z-10 overflow-hidden">
+    <div className="relative w-full h-full flex flex-col items-center justify-center px-4 sm:px-6 text-center z-10 overflow-hidden">
       
       {/* Floating Big Teddy Icon */}
       <motion.div
         animate={{ y: [0, -12, 0], rotate: [-4, 4, -4] }}
         transition={{ repeat: Infinity, duration: 3, ease: 'easeInOut' }}
-        className="text-7xl mb-6 drop-shadow-[0_12px_24px_rgba(236,72,153,0.35)]"
+        className="text-6xl sm:text-7xl md:text-8xl mb-4 sm:mb-6 drop-shadow-[0_12px_24px_rgba(236,72,153,0.35)]"
       >
         🧸
       </motion.div>
@@ -39,7 +39,7 @@ export default function Scene0Entrance({ onNext }) {
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="w-full max-w-sm card-romantic rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl relative"
+        className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl card-romantic rounded-3xl p-6 sm:p-8 md:p-10 space-y-6 shadow-2xl relative"
       >
         <AnimatePresence mode="wait">
           {step === 1 && (
@@ -49,7 +49,7 @@ export default function Scene0Entrance({ onNext }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.6 }}
-              className="text-lg sm:text-xl font-outfit font-semibold text-charcoal leading-relaxed"
+              className="text-lg sm:text-xl md:text-2xl font-outfit font-semibold text-charcoal leading-relaxed"
             >
               “{CONFIG.GREETINGS.ENTRANCE_LINE1}”
             </motion.p>
@@ -62,7 +62,7 @@ export default function Scene0Entrance({ onNext }) {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-2xl sm:text-3xl font-fredoka font-bold text-deep-rose leading-snug"
+              className="text-2xl sm:text-3xl md:text-4xl font-fredoka font-bold text-deep-rose leading-snug"
             >
               {CONFIG.GREETINGS.ENTRANCE_LINE2}
             </motion.h1>
@@ -76,13 +76,13 @@ export default function Scene0Entrance({ onNext }) {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <h1 className="text-2xl sm:text-3xl font-fredoka font-bold text-deep-rose leading-snug">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-fredoka font-bold text-deep-rose leading-snug">
                 {CONFIG.GREETINGS.ENTRANCE_LINE2}
               </h1>
 
               <button
                 onClick={handleEnter}
-                className="btn-pink-primary w-full py-4 rounded-full font-fredoka text-base tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95"
+                className="btn-pink-primary w-full py-4 rounded-full font-fredoka text-base sm:text-lg tracking-wider uppercase shadow-xl hover:scale-105 active:scale-95"
               >
                 {CONFIG.GREETINGS.BUTTON}
               </button>
