@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow: hidden;
+    background-color: #FFF0F5;
+    color: #1E293B;
+  }
+}
+
+/* High Contrast Responsive Glassmorphism Cards */
+.card-romantic {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid #F472B6;
+  box-shadow: 0 20px 50px -10px rgba(236, 72, 153, 0.22), 0 0 0 1px rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.card-romantic:hover {
+  box-shadow: 0 25px 60px -12px rgba(236, 72, 153, 0.3), 0 0 0 2px rgba(244, 114, 182, 0.4);
+}
+
+.card-romantic-subtle {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1.5px solid #FB7185;
+  box-shadow: 0 10px 30px rgba(251, 113, 133, 0.18);
+}
+
+/* Primary Button */
+.btn-pink-primary {
+  background: linear-gradient(135deg, #EC4899 0%, #BE123C 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 8px 25px rgba(225, 29, 72, 0.35);
+  transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-pink-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(225, 29, 72, 0.45);
+}
+
+.btn-pink-primary:active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 4px 15px rgba(225, 29, 72, 0.5);
+}
+
+.btn-pink-secondary {
+  background: #FFFFFF;
+  color: #BE123C;
+  font-weight: 700;
+  border: 2px solid #F472B6;
+  box-shadow: 0 6px 20px rgba(244, 114, 182, 0.2);
+  transition: all 0.25s ease;
+}
+
+.btn-pink-secondary:hover {
+  background: #FFF1F2;
+  border-color: #BE123C;
+  transform: translateY(-2px);
+}
+
+/* Candle flame animation */
+@keyframes candleFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 8px #F59E0B) drop-shadow(0 0 18px #EC4899);
+  }
+  50% {
+    transform: scale(1.15) rotate(2deg);
+    filter: drop-shadow(0 0 14px #F59E0B) drop-shadow(0 0 24px #EC4899);
+  }
+}
+
+.animate-flame {
+  animation: candleFlicker 1.4s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFE4E6;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #F472B6;
+  border-radius: 10px;
+}
